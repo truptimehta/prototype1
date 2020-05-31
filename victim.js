@@ -1,19 +1,35 @@
 class Victim{
-constructor(name,contact,highwayno,state,severity){
-this.name=name;
-this.contact=contact;
-this.highwayno=highwayno;
-this.state=state;
-this.severity=severity
+constructor(){
+//this.name=name;
+//this.contact=contact;
+this.highwayno=null;
+//this.state=state;
+//this.severity=severity
 }
 getHospitalInfo(){
+   /* var hospitalref= database.ref('Highways')
+    //console.log(hospitalref)
+    
+    hospitalref.orderByKey().equalTo("highway1").on("value",(data) =>{
+        if(allHospitals!==undefined)
+        {
+        allHospitals=data.val();
+        console.log(allHospitals)
+        }
+    })*/
+
+
+
+
+
     console.log("Getting info" + this.highwayno);
-var ref=database.ref('highways')
+    isAccident=false;
+var ref=database.ref('Highways')
 ref.orderByKey().equalTo(this.highwayno).on("value",(data)=>{
-    if(allHospitals!==undefined){
+    //if(allHospitals!==undefined){
          allHospitals=data.val();
          console.log(allHospitals)
-    }
+    //}
 
 
 })

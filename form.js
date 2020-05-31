@@ -28,8 +28,10 @@ this.submit.mousePressed(()=>{
     this.state.hide();
     this.severity.hide();
     this.submit.hide();
-    victim=new Victim( this.name.value(), this.contact.value(), this.highwayno.value(), this.state.value(), this.item);
-    victim.getHospitalInfo();
+    victim.highwayno=this.highwayno.value();
+    isAccident=true;
+   // victim=new Victim( this.name.value(), this.contact.value(), this.highwayno.value(), this.state.value(), this.item);
+   // victim.getHospitalInfo();
   
    
 })
