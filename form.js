@@ -6,6 +6,7 @@ this.highwayno=createInput('Highway number :');
 this.state=createInput('State :');
 this.severity=createSelect('Severity :');
 this.submit=createButton('submit : ')
+    this.item=null;
 }
 display(){
 this.name.position(100,30)
@@ -19,7 +20,7 @@ this.severity.option('2')
 this.severity.option('3')
 this.severity.option('4')
 this.severity.option('5')
-this.severity.changed(function(){this.severity});
+this.severity.changed(function(){this.item=this.severity.value();});
 this.submit.mousePressed(()=>{
     this.name.hide();
     this.contact.hide();
@@ -27,7 +28,7 @@ this.submit.mousePressed(()=>{
     this.state.hide();
     this.severity.hide();
     this.submit.hide();
-    var victim=new Victim( this.name.value(), this.contact.value(), this.highwayno.value(), this.state.value(), this.severity.value());
+    var victim=new Victim( this.name.value(), this.contact.value(), this.highwayno.value(), this.state.value(), this.item);
    
 })
 }
