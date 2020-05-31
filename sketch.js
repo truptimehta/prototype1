@@ -1,5 +1,5 @@
 
-var form;
+var form,victim;
 var database,allHospitals
 function setup() {
   var canvas=createCanvas(displayWidth,displayHeight);
