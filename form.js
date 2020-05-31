@@ -28,8 +28,9 @@ this.submit.mousePressed(()=>{
     this.state.hide();
     this.severity.hide();
     this.submit.hide();
-    var victim=new Victim( this.name.value(), this.contact.value(), this.highwayno.value(), this.state.value(), this.item);
+    victim=new Victim( this.name.value(), this.contact.value(), this.highwayno.value(), this.state.value(), this.item);
     victim.getHospitalInfo();
+  
    
 })
 }
